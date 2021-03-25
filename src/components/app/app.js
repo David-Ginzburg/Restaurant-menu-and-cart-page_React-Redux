@@ -1,4 +1,5 @@
 import React from 'react';
+import {Switch, Route} from 'react-router-dom';
 import {MainPage, CartPage} from '../pages';
 import AppHeader from '../app-header';
 import WithRestoService from '../hoc';
@@ -10,8 +11,11 @@ const App = ({RestoService}) => {
     return (
         <div style={{background: `url(${Background}) center center/cover no-repeat`}} className="app">
             <AppHeader total={50}/>
-            <MainPage/>
-            <CartPage/>
+            <Switch>
+                <Route path='/' exact component={MainPage}/>
+                <Route path='/cart' component={CartPage}/>
+                <Route exact component={MainPage}/>
+            </Switch>
         </div>
     )
 }
