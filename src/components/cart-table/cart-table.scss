@@ -8,6 +8,28 @@
         text-align: center;
         font-weight: 300;
     }
+    &__head {
+        width: 60%;
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 40px;
+        border: 1px solid rgba(256,256,256, .2);
+        background-color: rgba(0,0,0,.7);
+        box-shadow: 0 0 20px rgba(256,256,256, .1);
+        &-title, &-price, &-qtty, &-sum, &-photo {
+            width: 250px;
+            text-align: center;
+            color: #fff;
+            font-size: 24px;
+            padding: 10px;
+        }
+        &-photo {
+            width: 55%;
+        }
+    }
     &__list {
         width: 60%;
         margin: 0 auto;
@@ -21,16 +43,21 @@
         border: 1px solid rgba(256,256,256, .2);
         background-color: rgba(0,0,0,.7);
         box-shadow: 0 0 20px rgba(256,256,256, .1);
-        &-title, &-price  {
+        &-title, &-price, &-qtty, &-sum  {
             width: 250px;
             text-align: center;
             color: #fff;
             font-size: 24px;
+            padding: 10px;
         }
         &-img {
-            height: 125px;
-            width: 250px;
-            object-fit: cover;
+            width: 55%;
+            img {
+                display: block;
+                height: 125px;
+                width: 100%;
+                object-fit: cover;
+            }
         }
     }
     &__close {
